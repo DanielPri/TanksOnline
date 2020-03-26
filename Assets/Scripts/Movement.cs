@@ -30,7 +30,7 @@ public class Movement : MonoBehaviourPun
         Vector3 rotation = new Vector3
         {
             x = 0f,
-            y = Input.GetAxisRaw("Rotation"),
+            y = Input.GetAxisRaw("Horizontal"),
             z = 0f
         };
 
