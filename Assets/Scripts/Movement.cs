@@ -16,6 +16,13 @@ public class Movement : MonoBehaviourPun
         {
             TakeInput();
         }
+        transform.position = new Vector3
+        {
+            x = transform.position.x,
+            y = 0f,
+            z = transform.position.z
+        };
+        // transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
     }
 
     private void TakeInput()
