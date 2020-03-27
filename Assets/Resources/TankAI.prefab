@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2678462555799761380}
   - component: {fileID: 2666548769140094385}
   - component: {fileID: 3969028657431066691}
+  - component: {fileID: 5953356953122290171}
   m_Layer: 0
   m_Name: TankAI
   m_TagString: Untagged
@@ -122,6 +123,21 @@ MonoBehaviour:
   RadiusOfSatisfaction: 1
   path: []
   startingIndex: 0
+--- !u!114 &5953356953122290171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339398531851054922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d83b76901f04ef42a8c44c841b7b594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shellPrefab: {fileID: 7193277905775627617, guid: fd182b82cefa1ae42a77ea4e766a399b,
+    type: 3}
+  spawnPoint: {fileID: 8484305594648604539}
 --- !u!1 &6321640440975512291
 GameObject:
   m_ObjectHideFlags: 0

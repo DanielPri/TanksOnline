@@ -58,12 +58,11 @@ public class TankAI : MonoBehaviour
         float speedModifier = angle / 10f;
         transform.Rotate(0f, rotationSpeed * speedModifier * Time.deltaTime, 0f);
     }
-
+    
     private bool isAligned(out float angle)
     {
         Vector3 targetDir = path[currentIndex].position - transform.position;
         angle = Vector3.SignedAngle(targetDir, transform.forward, Vector3.up) * -1;
-        Debug.Log("Angle is: " + angle);
         if (angle < 10f && angle > -10f || Distance() < RadiusOfSatisfaction * 5)
         {
             return true;
