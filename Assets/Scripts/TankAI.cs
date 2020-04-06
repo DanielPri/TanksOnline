@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankAI : MonoBehaviour
+public class TankAI : MonoBehaviourPun
 {
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float rotationSpeed = 50f;
@@ -20,17 +21,20 @@ public class TankAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float angle;
-        if (!isAligned(out angle))
+        if (photonView.IsMine)
         {
-            Rotate(angle);
-        }
-        else
-        {
-            Move();
-        }
+            float angle;
+            if (!isAligned(out angle))
+            {
+                Rotate(angle);
+            }
+            else
+            {
+                Move();
+            }
 
-        handlePath();
+            handlePath();
+        }
     }
 
     void handlePath()
