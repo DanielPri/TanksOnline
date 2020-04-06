@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 856582273}
   - component: {fileID: 856582272}
   - component: {fileID: 856582271}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 953194508}
   - component: {fileID: 953194507}
   - component: {fileID: 953194506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 1567937430}
   - component: {fileID: 1567937429}
   - component: {fileID: 1567937428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 3192898570726666085}
   - component: {fileID: 4821878254433727219}
   - component: {fileID: -4413399253824866650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332856332477361260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShellSpawn
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

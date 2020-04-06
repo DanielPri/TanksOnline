@@ -31,9 +31,5 @@ MonoBehaviour:
   RpcList:
   - ClickRpc
   - DestroyRpc
-  - FireProjectile
-  - DestroyWall
-  - RemoveProjectile
-  - HandleCollision
   DisableAutoOpenWizard: 1
   ShowSettings: 0

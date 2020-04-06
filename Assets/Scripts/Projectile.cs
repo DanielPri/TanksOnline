@@ -6,9 +6,12 @@ using Photon.Pun;
 public class Projectile : MonoBehaviourPun
 {
     [SerializeField] private float projectileSpeed;
+    [SerializeField]
+    private SoundManager soundmanager;
     // Start is called before the first frame update
     void Start()
     {
+        soundmanager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         GetComponent<Rigidbody>().velocity = transform.forward * projectileSpeed;
         Destroy(gameObject, 5f);
     }
@@ -21,6 +24,7 @@ public class Projectile : MonoBehaviourPun
     {
         if(col.gameObject.tag == "Wall")
         {
+            soundmanager.PlayWallBreak();
             Destroy(col.gameObject);
             Destroy(gameObject);
         }

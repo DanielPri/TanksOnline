@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2666548769140094385}
   - component: {fileID: 3969028657431066691}
   - component: {fileID: 5953356953122290171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TankAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   shellPrefab: {fileID: 7193277905775627617, guid: fd182b82cefa1ae42a77ea4e766a399b,
     type: 3}
   spawnPoint: {fileID: 8484305594648604539}
+  cooldown: 0.5
 --- !u!1 &6321640440975512291
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8484305594648604539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShellSpawn
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -180,7 +181,7 @@ GameObject:
   - component: {fileID: 7476273594342183041}
   - component: {fileID: 7476273594342183042}
   - component: {fileID: 7476273594342183043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +274,7 @@ GameObject:
   - component: {fileID: 7476273595847322518}
   - component: {fileID: 7476273595847322519}
   - component: {fileID: 7476273595847322472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +367,7 @@ GameObject:
   - component: {fileID: 7476273596042730267}
   - component: {fileID: 7476273596042730268}
   - component: {fileID: 7476273596042730269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
