@@ -138,7 +138,7 @@ MonoBehaviour:
   shellPrefab: {fileID: 7193277905775627617, guid: fd182b82cefa1ae42a77ea4e766a399b,
     type: 3}
   spawnPoint: {fileID: 8484305594648604539}
-  cooldown: 0.5
+  cooldown: 1
 --- !u!1 &6321640440975512291
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ public class AICannon : MonoBehaviour
         Ray ray = new Ray(spawnPoint.position, spawnPoint.forward);
         if(Physics.Raycast(ray,out hit))
         {
-            Debug.Log("Raycast is " + hit.transform.tag);
             if (hit.transform.tag == "Player")
             {
                 Fire();   

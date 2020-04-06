@@ -8,6 +8,11 @@ public class Movement : MonoBehaviourPun
 {
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float BoostMagnitude = 2f;
+    [SerializeField] private float boostDuration = 5f;
+
+    private float boostTimeElapsed = 0f;
+    private float currentMultiplier = 1f;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +27,7 @@ public class Movement : MonoBehaviourPun
             y = 0f,
             z = transform.position.z
         };
-        // transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
+        HandleBoost();
     }
 
     private void TakeInput()
@@ -41,7 +46,30 @@ public class Movement : MonoBehaviourPun
             z = 0f
         };
 
-        transform.Translate(movement * movementSpeed * Time.deltaTime);
-        transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
+        transform.Translate(movement * movementSpeed * currentMultiplier * Time.deltaTime);
+        transform.Rotate(rotation * rotationSpeed * currentMultiplier * Time.deltaTime);
+    }
+
+    private void HandleBoost()
+    {
+        if(currentMultiplier == BoostMagnitude)
+        {
+            if(boostTimeElapsed > boostDuration)
+            {
+                currentMultiplier = 1f;
+            }
+            boostTimeElapsed += Time.deltaTime;
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.tag == "PowerUp")
+        {
+            boostTimeElapsed = 0f;
+            currentMultiplier = BoostMagnitude;
+            Destroy(col.gameObject);
+        }
     }
 }
